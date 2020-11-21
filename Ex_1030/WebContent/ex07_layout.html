@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>레이아웃 만들기</title>
+		
+		<link rel = "stylesheet" href = "css/reset.css"/>
+		
+		<style type="text/css">
+			#header{position: relative;
+					width:960px;
+					height : 150px;
+					margin: 0 auto;}
+					
+			#hgroup{position:absolute;
+					left:5px; top:10px;} /*부모객체가 position: relative;가지고 있기때문에 부모객체 기준으로 자리가 잡힌다.   */
+			
+			ul{overflow:hidden;}
+			
+			li{float:left;}		
+			
+			#a1{position:absolute;
+				right:0; top:3px;}
+				
+			#a1 ul li{border-right: 1px solid gray;
+					  border-top: 1px solid gray;
+					  border-bottom: 1px solid gray;}	
+			#a1 ul li:first-child {border-left: 1px solid gray;}
+			
+			#a1 ul li a{ display : block; /*인라인 요소는 padding이 먹지 않는다..  */
+						 padding:5px 10px; color:#666;}	
+						 
+			#a1 ul a:hover{background: #999;
+						   color:#fff;}
+						   
+			#a2{position: absolute;
+				right:0; bottom:3px;}		
+				
+			#a2 ul{overflow:hidden;}
+				
+			#a2 ul li{border-right: 1px solid gray;
+					  border-bottom: 1px solid gray;
+					  border-top:1px solid gray;}
+					  
+			#a2 ul li:first-child{border-left:1px solid gray;}	
+			
+			#a2 ul li a{display: block;
+						padding: 5px 10px; color: #666;}
+						
+			#a2 ul li a:hover{background: #aaf;
+								color : #fff;}				  
+					   			 	  		
+		</style>
+	
+	</head>
+	
+	<body>
+		<div id = "header">
+			<div id = "hgroup">
+				<h1>HTML Development</h1>
+				<h2>HTML + CSS</h2>
+			</div>
+			
+			<div id = "a1">
+				<ul>
+					<li><a href = "#">Web</a></li>
+					<li><a href = "#">Mobile</a></li>
+					<li><a href = "#">Game</a></li>
+					<li><a href = "#">Simulation</a></li>
+					<li><a href = "#">Data</a></li>
+				</ul>
+			</div>
+			
+			<div id = "a2">
+				<ul>
+					<li><a href = "#">HTML</a></li>
+					<li><a href = "#">CSS</a></li>
+					<li><a href = "#">JavaScript</a></li>
+					<li><a href = "#">JQuery</a></li>
+					<li><a href = "#">JSP</a></li>
+				</ul>
+			</div>
+			
+		</div>	
+	</body>
+</html>

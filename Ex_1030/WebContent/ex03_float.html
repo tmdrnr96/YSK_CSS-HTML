@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>float position</title>
+		<style type="text/css">
+			*{margin:0; padding:0;}
+			
+			#wrap{width:500px;
+				  margin:0 auto;
+				  border:5px solid #f00;
+				  background : black;}
+				  
+			#header{width:500px;
+					background: #09f;
+					margin-bottom:10px;
+					text-align: center;
+					color:#fff;
+					padding:10px 0;}
+					
+			#content{width:500px;
+					background:#ccc;
+					margin-bottom:10px;				
+				    overflow:hidden;}
+					
+				#left{width:180px;
+					  background:#fcf;
+					  height :100px;
+					  padding:10px;
+					  float:left;}
+						
+				#rigth{width:180px;
+					  background:#aaf;
+				      height :100px;
+					  padding:10px;
+					  float:right;}
+		
+				#footer{width:500px;
+						background:#33f;
+						color:#fff;
+						padding:10px 0;
+						text-align:center;}
+		
+		</style>
+	</head>
+	
+	<body>
+		<div id = "wrap">
+			
+			<div id = "header">
+				<p>플롯의 헤더</p>
+			</div>
+			
+			<div id = "content">
+				<div id = "left">
+					<p>왼쪽으로 자리잡을 div입니다.</p>
+				</div>
+				
+				<div id = "rigth">
+					<p>오른쪽으로 자리잡을 div입니다.</p>
+				</div>
+				
+			</div>
+			
+			<div id = "footer">
+				<p>플롯의 footer</p>
+			</div>
+			
+		</div>
+	
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			/* border-collapse : collapse -> 테이블의 줄이 1줄로 합쳐진다. */
+			table{border-collapse : collapse;}
+		</style>
+	</head>
+	
+	<body>
+		<table border = "1">
+			<caption>2020년 전자기기 판매 현황</caption>
+			<!--음성 낭독기는 위에서 아래로 코드를 읽기때문에 이상태로 로드를 하게 된다면 구분, 태블릿, 스마트폰 다음으로 총판매수를 읽는다  -->
+			<!--하지만 화면상으로는 tfoot는 가장 아래쪽 행으로 표시된다.  -->
+			
+				<!--thead : 테이블의 가장 상단에 표시될 정보  -->	
+				<thead>
+					<tr>
+						<th>구분</th>
+						<th>태블릿</th>
+						<th>스마트폰</th>
+					</tr>
+				</thead>
+				<!--tfoot : 테이블의 가장 아래에 표시될 정보  -->
+				<tfoot>
+					<tr>
+						<th>총 판매수</th>
+						<td>5만대</td>
+						<td>16만대</td>
+					</tr>
+				</tfoot>
+				
+				<!--tbody : 테이블의 중간에 표시될 정보  -->
+				<tbody>
+					<tr>
+						<th>상반기 판매수</th>
+						<td>2만대</td>
+						<td>5만대</td>
+					</tr>			
+					<tr>
+						<th>하반기 판매수</th>
+						<td>3만대</td>
+						<td>11만대</td>
+					</tr>				
+				</tbody>
+				 
+				
+				
+				
+		</table>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>float(왼쪽, 오른쪽 정렬)</title>
+		<style type="text/css">
+			*{margin: 0; padding : 0;}
+		
+			#container{margin:10px auto; /*위에래로 10px 좌우로 auto로 가운데 정렬  */
+						width: 500px; /*width가 잡혀 있어야 margin:10px auto;의 auto가 가능함!   */
+						border: 5px solid #caa;
+						padding:10px;
+						background: #fdd;
+						overflow: hidden;}
+						/* overflow: hidden : float을 가지고 있는 자식객체까지는 나의 자식객체라는 것을 알려준다.  */
+						/*hidden이 없으면 float속성을 가지고 있는 자식객체를 인지하지 못한다.  */
+						
+						/* 자식태그가 float속성을 가지고 있다면
+						그 부모는 대부분 overFlowL:hidden을 가지고 있다.(overflow: hidden // float은 세트!)  */
+						
+			h1{text-align: center;}/*중앙정렬  */			
+			
+			.div1{width:200px; /* 자식의 높이가 높아지면 부모도 같이 커진다.. */
+				  height:100px;
+			      padding : 15px;
+				  background: #dda;
+				  float:left;} /*float:left를 하는 순간 부모인 container인 부모의 영역에서 떠오르면서 빠져나간다. */ 
+				 
+				  
+			.div2{width:200px; /* 자식의 높이가 높아지면 부모도 같이 커진다.. */
+				  height:100px;
+			      padding : 15px;
+				  background: #ba7;
+				  float:right;}
+		</style>
+	</head>
+	
+	<body>
+		<div id = "container">
+			<h1>float연습</h1>
+			
+			<div class = "div1">
+				<p>float을 통한 정렬 예제</p>
+			</div>
+			
+			<div class = "div2">
+				<p>float을 통한 정렬 예제</p>
+			</div>
+			
+		</div>
+	</body>
+</html>

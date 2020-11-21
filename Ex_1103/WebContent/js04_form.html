@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form태그를 통한 데이터 전달 1</title>
+		
+		<script type="text/javascript">
+			function check() {
+				/*body에서 form태그가 여러개 존재할 경우
+				  0,1,2 등의 인덱스로 form태그를 구별한다.*/
+				
+				/*body안에 있는 여러개의 form들 중에서 0번째꺼를 가져온다.   */
+			 var f = document.forms[0];	//제일 위에 있는 form이 0번쨰 form이고 그 다음에 form태그가 있다면 그것은 1번이다!
+			 
+			 //f.id : form태그에서 id라는 name속성을 가지고 있는 입력상자!(document없이 input속성을 바로 꺼내온다.)
+			 var myId= f.id.value;
+			 	//만약에 myId의 값이 비어있다면..
+				if(myId == ''){
+					alert("아이디는 필수사항 입니다.");
+					return;//정지! submit으로 넘어가지 못한다.
+				}
+				//f.pwd : form태그에서 pwd라는 name속성을 가지고 있는 입력상자!(document없이 input속성을 바로 꺼내온다.)
+			 	var myPwd = f.pwd.value;
+					if(myPwd == ''){
+						alert("비밀번호는 필수사항입니다.");
+						return;
+					}
+					
+				var myAge = f.age.value;
+				if(myAge == ''){
+					alert("나이는 필수사항입니다.");
+					return;
+				}
+				//action : 파라미터를 전달할 페이지
+				f.action="login.jsp";
+				//전송 방식(Get, Post)
+				//GET : 파라미터가 url에 노출된다. 속도가 빠르지만 보안성이 취약
+				//POST : 파라미터가 url에 노출되지 않는다. 
+						//속도는 느리지만 보안성이 높고 바이너리 타입의 데이터를 전달하는 것이 가능
+				f.method = "get";
+			 //0번째 form태그에서 검색된 파라미터만 서버에 전달(다른 form태그에 있는 것은 넘어가지 않는다.)
+			 	f.submit();//서버로 파라미터 전달!
+			}
+		
+		</script>
+		
+	</head>
+	
+	<body>
+		<!--name 속성은 form태그 안에서만 동작을 한다.  
+			form태그 안에 있는 name을 지정한 값을 파라미터로 보낸다.->
+			
+			<!--이와 같은 경우는 잘쓰지 않으며, 유효성체크가 필요없을 경우 사용한다.  -->
+		<!--login.jsp에게 파라미터를 보낸다. name으로 지정해 놓은 id와 pwd의 값을 파라미터로 넘긴다.  -->	
+		<form> <!-- method = "get" -->
+			  <!-- action="login.jsp" -->
+			  
+			<table border = "1">
+				<tr>
+					<th>ID : </th>
+					<td><input name = "id"></td>
+				</tr>
+				
+				<tr>
+					<th>PWD : </th>
+					<td><input type = "password" name = "pwd"></td>
+				</tr>
+				
+				<tr>
+					<th>AGE :</th>
+					<td><input name = "age"></td>
+				</tr>
+					
+				
+				<tr>
+					<!-- td안에 있는 요소 가운데 정렬  -->
+					<td colspan = "2" align = "center">
+						<!-- <input type = "submit" value = "전송"> -->
+						<input type = "button" value = "전송"
+							   onclick = "check();">
+					</td>
+				</tr>
+			</table>
+		</form>
+	
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>link 가상클래스(a태그의 가상클래스)</title>
+		<style type="text/css">
+			li{list-style: none;
+				margin : 5px 0;}
+				
+			a{text-decoration: none;
+			  color : gray;}
+				  
+			/* hover -> active순으로 반드시 작성해야 이벤트가 정상적으로  작동된다.  */
+			/* 마우스 오버, 마우스 클릭 감지를 위해  반드시 hover, active순으로 정의한다.  */
+			/* 마우스 오버  */	  
+			a:hover{color:orange;
+				     text-decoration: line-through;}	
+				  
+			/* 마우스 클릭 감지  */ 
+			a:active{color:red;}  /*클릭할때 발생하는 이벤트!  */
+			
+		</style>
+	</head>
+	
+	<body>
+		<ul>
+			<li><a href = "#">홈</a></li>	
+			<li><a href = "#">회원가입</a></li>
+			<li><a href = "#">사이트맵</a></li>
+			<li><a href = "#">오시는길</a></li>				
+		</ul>
+	</body>
+</html>

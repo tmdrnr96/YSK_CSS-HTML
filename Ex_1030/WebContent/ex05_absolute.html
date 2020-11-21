@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>position absolute</title>
+		
+		<link rel="stylesheet" href="css/reset.css"/>
+		<style>
+		body{margin:40px;}
+		
+		.box{width:250px;
+			border: 1px solid red;
+			position: relative;}/*.blue가 자신의 자식임을 인지시킴..  */
+			
+			p{width:130px; height:80px;
+			  padding:10px; 
+			  color:#fff;}
+			  
+			  .red{background:red;}
+			  
+			  .blue{background:blue;
+			   		position:absolute;/*태그의 종류에 따라 멋대로 위치가 변경된다.. 원래 0,0으로 잡히나 이 처처럼 예외의 경우도 있다  */
+			    	left : 50px; top :30px;}
+			    	/*옆의 좌표는 부모의 영역을 벗어난 브라우져 기준으로 자리가 잡힌다.  */
+			  		/* 원래는 부모를 기준으로 영역이 결정되지만 position:absolute;가 사용됨에 따라 좌표의 기준이 브라우저로 바뀐다. */
+			  		/* .box에  position: relative; 가 있음으로 브라우저 중심이였던 좌표값이 부모를 기준으로 영역이 바뀐다.*/
+			  		/*position:absolute과  position: relative;는 세트 개념..거의.. */
+			  		/*float과 overflow: hidden이 세트인것처럼!! 둘다 확실히 알고 있어야함..  */
+			  			  		
+			  .green{background:green;}
+		
+		</style>
+		
+	</head>
+	
+	<body>
+		<div class = "box">
+			<p class = "red">포지션 속성 보기</p>
+			<p class = "blue">포지션 속성 보기</p>
+			<p class = "green">포지션 속성 보기</p>
+		</div>
+	</body>
+</html>

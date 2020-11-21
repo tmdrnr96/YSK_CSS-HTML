@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>논리연산자</title>
+		<script>
+		/*prompt를 통해 받은 값은 반드시 문자열 구조로 넘어온다.  */
+		var gender = prompt("당신의 성별은?");/*스캐너처럼 값을 넣을 때 쓰는 것! (반드시 문자열 형태의 값이 넘어온다.) */
+		document.write(gender + 100,"<br>");
+		
+		//var age = Number(prompt("당신의 나이는?"));/* Number로 prompt를 감싸주면 나이가 더해진다..(정수로 바껴서 나온다.)  */
+		//document.write(age + 10, "<br>");
+	
+		var age = prompt("당신의 나이는?");/*비교연산자에 Number를 감싸주지 않고 비교를 한다면 자동으로 정수값으로 바꿔준다.   */
+		
+		var result = age >= 20 && gender == "여자";/* 자바스크립트는 자바와는 다르게 equls를 쓰지 않고 더블이퀄(==)로 비교를 한다, */
+		document.write(result);
+		
+		document.write("<hr>");
+		
+		var num1 = String(100);/*String으로 감싸면 정수를 문자열값 var변수에 저장  */
+		document.write(num1 + 100); /* 정수를 더할 때  *//*String타입으로 변했기 때문에 값이 더해지지않고 이어 붙는다.  */
+		document.write(num1 , 100); /* 정수를 이어 붙일 때 */
+	
+		
+		
+		</script>
+	</head>
+	
+	<body>
+	
+	</body>
+</html>

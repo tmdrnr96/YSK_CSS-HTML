@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>인라인 요소 -> 블록 요소로 바꾸기</title>
+		<style type="text/css">
+			img{display: block;}
+			span{display: block;/*인라인 요소를 블록 요소로 강제 변환  */
+			border: 1px solid red;}
+			/* span{display: inline;}  : 블록요소를 인라인 요소로 강제변환*/
+		</style>
+	</head>
+	
+	<body>
+		<div>
+			<img alt="스마일" src="image/acid2Test.jpg"><!--인라인 요소  -->
+			<span>이미지1</span><!--인라인 요소  -->
+			<a href = "#">링크</a><!--인라인 요소  -->
+		</div>
+	</body>
+</html>

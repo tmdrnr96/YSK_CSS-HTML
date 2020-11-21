@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<title>margin(바깥쪽 여백)</title>
+		<style type="text/css">
+		p{border: 2px solid red;
+		background: aqua;}
+		
+		div{border: 2px solid red;}
+		
+		.box1{margin : 30px;}/*상 하 좌 우의 바깥쪽 여백에 적용된다.  */
+		/*HTML은 마진 적용시 사이즈가 큰 쪽에 흡수된다.
+		(ex)box1, box2의 상하의 마진은 30px이다. box2의 위쪽 마진은 box1의 아랫쪽 마진에 흡수된다.)  */
+		.box2{margin : 20px 50px;}/*20px : 상,하  50px: 좌,우 */
+		.box3{margin : 30px 50px 30px;}/* 상, 좌우, 하  */
+		.box4{margin : 50px 30px 40px 70px;}/*상, 우, 하, 좌  */
+		 div{margin : 50px; }
+		</style>
+	</head>
+	
+	<body>
+		<p class = "box1">마진적용 테스트 중</p>
+		<p class = "box2">마진적용 테스트 중</p>
+		<p class = "box3">마진적용 테스트 중</p>
+		<p class = "box4">마진적용 테스트 중</p>
+		
+		<!--블럭요소는 기본적으로 16px 정도의 여백을 가지고 있지만 
+			div는 바깥 여백을 가지고 있지 않고 딱 붙어서 만들어진다.  -->
+		<div class = "box5">div 마진</div>
+		<div class = "box6">div 마진</div>
+			
+	</body>
+</html>

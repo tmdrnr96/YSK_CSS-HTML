@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>이미지 슬라이드</title>
+		<style type="text/css">
+		
+			a{text-decoration: none;}
+		
+		</style>
+		
+		<script type="text/javascript">
+		
+			var num = 1;
+			var path = "image/img";
+			
+			function prev(){
+				num--;
+				
+				if(num < 1){
+					num = 7;
+				}
+				
+				/*id 검색 작업은 반드시 function안에서 이뤄져야한다.  */
+				//galley라는 id를 가진 태그를 검색한다.
+				var my_a = document.getElementById("gallery");
+				my_a.src = path + num + ".jpg";
+				
+			}//prv
+		
+			function next(){
+				num++;
+				
+				if(num > 7){
+					 num = 1;
+				}
+				var my_b = document.getElementById("gallery");
+				my_b.src = path + num + ".jpg";
+				
+			}
+			
+			/* 특정 메서드를 1초간격으로 자동으로 메서드 호출 */
+			setInterval("next()", 1000);
+			
+		</script>
+	</head>
+	
+	<body>
+	<!--스크립트에서 body안에 있는 것들을 제어하기 위해서는 id가 꼭 필요하다.  -->
+		<div id = "gallerywrap">
+			<p>
+				<a href = "#" onclick = "prev();">
+					<image alt = "이전" src = "image/left_btn.png">
+				</a>
+				
+				<image alt ="갤러리" src = "image/img1.jpg" id = "gallery"
+						width = 300px; height = "200px;">
+				
+				<a href = "#" onclick = "next();">
+					<image alt = "다음" src = "image/right_btn.png">
+				</a>
+			</p>
+		</div>
+	
+	</body>
+</html>

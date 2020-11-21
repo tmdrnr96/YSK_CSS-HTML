@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>z-index(z인덱스)</title>
+		<style type="text/css">
+			*{margin:0; padding: 0;} /*body안에 있는 마진과 패딩 0!  */
+			p{border : 1px solid black;
+				width: 80px;
+				height: 80px;
+				padding : 10px;
+				position: absolute;}/* position: absolute(절대좌표) -> 브라우져 기준으로 0,0한곳으로 몰린다(좌표를 하나하나 주기 전까지..) */
+				/*position: absolute -> 순서 가장아래 box1, 중간 box2, 가장 밖에 보이는 것이 box3!(좌표값을 주기 전까지 겹쳐져서 보인다.)  */
+				
+				/*  z-index : z인덱스의 값이 클수록 화면 위쪽에 표시된다.  */
+				.box1{background: yellow;
+					  left: 100px; top:100px;/* 왼쪽에서 100px 그리고 위에서 100px떨어진 곳에 box1의 위치를 옮긴다.  */
+					  z-index:3;}/*   z-index : 의 값이 클수록 브라우져에서 위쪽으로 보인다. 값을 똑같이 넣으면 안넣은거나 마찬가지  */
+					  
+				.box2{background: orange;
+					  left : 120px; top:120px;
+					  z-index:2;}
+					  
+				.box3{background: teal;
+				      left: 140px; top:140px;
+				      z-index:1;}
+		
+		</style>
+		
+	</head>
+	
+	<body>
+		<p class = "box1">박스1</p>
+		<p class = "box2">박스2</p>
+		<p class = "box3">박스3</p>
+	</body>
+</html>

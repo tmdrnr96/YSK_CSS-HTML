@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>for문</title>
+		<script>
+			document.write("---for문---<br>");
+			
+			for(var i = 1; i <= 5; i++ ){
+				document.write(i + "<br>");
+			}
+			
+			document.write("<br>");
+			
+			//키보드에서 정수를 입력받고, 입력받은 값에 해당하는 
+			//구구단을 출력
+			
+			var dan = Number(prompt("정수를 입력하시오"));
+			
+			for(var i = 1; i <= 9; i++){
+				document.write(dan + " * " + i + " = "+ (dan * i) + "<br>" );
+			}
+			
+			document.write("<hr>");
+			
+			for(var i = 6; i >= 1; i--){
+				document.write('<h'+i+'>', i, '</h'+i+'>');
+			}
+			
+			document.write("<hr>");
+			
+			document.write("<ul>");
+		
+				for(var i = 0; i < 5; i++){
+					document.write("<li>",i,"</li>");
+				}			
+			
+			document.write("</ul>");
+			
+			
+		</script>
+	</head>
+	
+	<body>
+		시작하기
+	</body>
+</html>

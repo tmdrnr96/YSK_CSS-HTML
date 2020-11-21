@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form태그를 통한 데이터 전달 3</title>
+		<script type="text/javascript">
+		
+		function check(f){//f -> this.form
+			var kor = f.kor.value;
+			var eng = f.eng.value;
+			
+			f.submit();
+		}//check()
+		</script>
+	</head>
+	
+	<body>
+		<form action = "aa.jsp"
+			  method = "get">
+			
+			<table border = "1">
+				<tr>
+					<th>국어</th>
+					<td><input name = "kor"></td>
+				</tr>
+				<tr>
+					<th>영어</th>
+					<td><input name = "eng"></td>
+				</tr>
+				<tr>
+					<!-- this는 현재 전송버튼을 의미한다.  
+						this.form은 나를 소유하고 있는 form태그를 의미!!
+					 	가장 많이 사용하는 형태!-->
+					<td>
+						<input type = "button" value = "전송" onclick = "check(this.form);">
+						<!-- this.form이라는 속성만 존재하며,
+							 this.table, this.div...등은 존재하지 않는다.
+							 이외에는 모두 아이디를 검색해야한다. -->
+					</td>
+				</tr>			
+			</table>
+			
+		</form>
+	</body>
+</html>

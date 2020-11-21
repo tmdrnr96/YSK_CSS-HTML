@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>배경이미지 위치 조정</title>
+		<style type="text/css">
+			p{border: 1px solid black;
+			  width: 500px;
+			  height : 150px;
+			  padding :50px;}
+			  
+			.back1{background: yellow url(image/background.jpg)
+				   no-repeat right bottom;}
+			.back2{background:aqua url(image/background.jpg) 
+				   no-repeat 20px 100px;}/*경로를 설정해 줄 수 있다.(위쪽에서 100px, 왼쪽에서 20px에 이미지를 넣어준다.) */
+				   
+			.back3{background: #aca url(image/background.jpg) 
+				   no-repeat 70% 10%;}/*전체를 100%라고 보고 x좌표 70% 지점, y로 10% 지점에 이미지를 삽입    */	
+				   
+			.back4{background: #aaf /* url(image/background.jpg) 
+					no-repeat center */;}	      
+		</style>
+	</head>
+	
+	<body>
+		<p class = "back1">
+			배경이미지 연습
+		</p>
+		
+		<p class = "back2">
+			배경이미지 연습
+		</p>
+		
+		<p class = "back3">
+			배경이미지 연습
+		</p>
+		
+		<p class = "back4">
+			배경이미지 연습
+		</p>	
+	</body>
+</html>

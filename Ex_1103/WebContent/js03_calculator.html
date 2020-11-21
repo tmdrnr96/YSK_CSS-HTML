@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>계산기</title>
+		
+		<style type="text/css">
+			
+			li{list-style: none;
+				float:left;
+				margin-left: 10px;}
+				
+			ul{overflow: hidden;}
+			
+			/*입력상자에 테두리가 없어진다.  */
+			input{border-style: none;}	
+		
+		</style>
+	
+			<script type="text/javascript">
+			
+			function calculator(op){
+	
+				/* 검색을 해서 가져오는 결과는 문자열이다. 떄문에 정수로 바꾸기 위해서는 Number로 감싸준다. */
+			var su1 = Number(document.getElementById("su1").value);		
+			var su2 = Number(document.getElementById("su2").value);
+			var result = document.getElementById("result");
+			
+			switch(op){
+			case '+' :
+				result.value = su1 + su2;
+				break;
+			
+			case '-':
+				result.value = su1 - su2;			
+				break;
+				
+			case '*':
+				result.value = su1 * su2;
+				break;
+				
+			case '/':
+				result.value = su1 / su2;
+				break;
+				
+			  }//switch
+			
+			}//calculator
+			
+			</script>
+	
+	</head>
+	
+	<body>
+	 <table border = "1">
+	 	<tr>
+	 		<!--class는 100프로 스타일시트용, id는 id 검색과 스타일시트..  -->
+	 		<!-- placeholder : -> 일종의 가이드 라인! -->
+	 		<th class = "su">수1</th>
+	 		<td><input id = "su1" placeholder="정수만 입력하세요." ></td>
+	 	</tr>
+	 
+	 	<tr>
+	 		<!--class는 100프로 스타일시트용, id는 id 검색과 스타일시트..  -->
+	 		<th class = "su">수2</th>
+	 		<td><input id = "su2" placeholder="정수만 입력하세요." ></td>
+	 	</tr>
+	 	
+	 	<tr>
+	 		<td colspan = "2">
+	 			<ul>
+	 				<li>
+	 					<input type = "button" value = "+" onclick = "calculator('+');">	 				
+	 				</li>
+	 				
+	 				<li>
+	 					<input type = "button" value = "-" onclick = "calculator('-');">	 				
+	 				</li>
+	 				
+	 				<li>
+	 					<input type = "button" value = "*" onclick = "calculator('*');">	 				
+	 				</li>
+	 				
+	 				<li>
+	 					<input type = "button" value = "/" onclick = "calculator('/');">	 				
+	 				</li>
+	 				
+	 			</ul>
+	 		</td>
+	 	</tr>
+	 	<tr>
+	 		<th>결과</th>
+	 		<td><input id = "result"></td>
+	 	</tr>
+	 
+	 </table>
+	
+	</body>
+</html>
